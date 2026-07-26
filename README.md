@@ -39,4 +39,4 @@ if usuario in USUARIOS_PERMITIDOS and USUARIOS_PERMITIDOS[usuario] == senha:
 session['usuario'] = usuario
 return redirect(url_for('dashboard')) 
 
-return 'alert("Usuário ou senha incorretos!"); window.location.href="/";
+return 'alert("Usuário ou senha incorretos!"); window.location.href="/
