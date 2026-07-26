@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conselho Ceabas Gold - Dashboard</title>
+    <style>
+        body { font-family: Arial; background: #0a0a0a; color: gold; margin: 0; padding: 20px; }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid gold; padding-bottom: 15px; margin-bottom: 30px; }
+        .card { background: #1a1a1a; padding: 20px; border-radius: 10px; border: 1px solid gold; margin-bottom: 20px; }
+        .btn-sair { background: red; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        .btn-sair:hover { background: #cc0000; }
+        h1, h2 { color: gold; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>CONSELHO CEABAS GOLD</h1>
+        <a href="/logout" class="btn-sair">SAIR</a>
+    </div>
+    
+    <h2>Bem-vindo, {{ usuario }}!</h2>
+    
+    <div class="grid">
+        <div class="card">
+            <h3>📊 Relatórios</h3>
+            <p>Acesse os relatórios do conselho</p>
+        </div>
+        
+        <div class="card">
+            <h3>👥 Membros</h3>
+            <p>Gerenciar membros Gold</p>
+        </div>
+        
+        <div class="card">
+            <h3>💰 Financeiro</h3>
+            <p>Controle financeiro</p>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h3>Área Exclusiva do Conselho</h3>
+        <p>Esta é a área restrita para membros do Conselho Ceabas Gold.</p>
+    </div>
+</body>
+</html>
