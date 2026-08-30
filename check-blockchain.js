@@ -1,10 +1,8 @@
 const { ethers } = require("ethers");
 
 async function main() {
-
-  
-  
-  const provider = new ethers.JsonRpcProvider("https://ankr.com");
+    // URL estável e atualizada para a rede Sepolia
+    const provider = new ethers.JsonRpcProvider("https://publicnode.com");
     const walletAddress = "0x71C7656EC7ab88b098defB751B7401B5f6d8976F";
 
     console.log(`Conectando à rede Sepolia...`);
