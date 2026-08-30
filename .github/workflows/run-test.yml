@@ -1,0 +1,22 @@
+name: Testar Conexao Blockchain
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check-sepolia:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o codigo do repositorio
+        uses: actions/checkout@v4
+
+      - name: Instalar o Node.js no servidor
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar a biblioteca ethers
+        run: npm install ethers
+
+      - name: Executar script de teste
+        run: node check-blockchain.js
