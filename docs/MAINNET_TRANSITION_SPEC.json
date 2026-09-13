@@ -1,0 +1,18 @@
+{
+  "MAINNET_TRANSITION_SPEC": {
+    "FASE_COMPILACAO": "Rascunho de Engenharia - Modo Isolado",
+    "INVENTARIO_COMPONENTES": {
+      "CONTRATOS_EVM": "Token DubaiAxicoin v45.4 (Alinhamento de Gasless Paymaster)",
+      "INFRAESTRUTURA": "Docker-Compose + Local IPFS Kubo Node Bridge",
+      "SEGURANCA_PERIMETRO": "Firewall UFW Lacre 7.1 Ativo (Porta 3000 Isolada)"
+    },
+    "ROTACOES_CRITICAS": {
+      "EVIDENCIA_EXPURGO": "Recovery Codes antigos invalidados via SMS 2FA às 00:45 BRT",
+      "CHAVE_PRODUCAO": "SEPOLIA_PRIVATE_KEY rotacionada para 64 hex puros (No-0x) no GitHub Secrets"
+    },
+    "PIPELINE_VALIDATION": {
+      "ESTEIRA_CI_CD": "run-test.yml corrigido no commit 146b77e",
+      "VALIDADOR_CORE": "node src/sepolia-validator.js (Syntax & Linker Check Pass)"
+    }
+  }
+}
