@@ -1,0 +1,15 @@
+# 1. entra no clone já existente
+git clone https://github.com/lparejo2121-droid/CONSELHO-CEABAS-GOLD.git
+cd CONSELHO-CEABAS-GOLD
+
+# 2. cria a branch fixada
+git checkout -b N04-LPL-SONICA-v20-FIXADO
+
+# 3. copia os 4 arquivos pra dentro da pasta e adiciona
+git add LPL_SPEC_v20_S0.md LPL_JONSON_NUCLEO_CEABAS_LIVE_v7.8.5.json RELATORIO_AUDITORIA_380QT.md check-blockchain.js
+
+# 4. commit com chancela
+git commit -m "feat: N04-LPL-SONICA v20.0 FIXADO - 150Q - DISJUNTOR VERDE_ATIVADO - DIAMOND_V13Q_CLOSED_AND_LOCKED - 44|45|00|14|03:02"
+
+# 5. push
+git push -u origin N04-LPL-SONICA-v20-FIXADO
