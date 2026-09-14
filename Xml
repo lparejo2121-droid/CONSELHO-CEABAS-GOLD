@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>KML_UNIFICADO_N02_V13Q - CEABAS_CORE_10.41</name>
+  <description>OPERACAO: Mapeamento Praia Grande-SP | OPERADOR: Laercio Goes Parejo CREA-SP 5070081687 N02 | SINAL: 0dB_TRAVADO | CHANCELA: DIAMOND_V13Q_OK | GOOGLE_ADMITIU_ERRO</description>
+
+  <Style id="posteStyle">
+    <IconStyle><color>ff00ff00</color><scale>1.2</scale><Icon><href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href></Icon></IconStyle>
+  </Style>
+  <Style id="auditoriaStyle">
+    <IconStyle><color>ff0000ff</color><scale>1.1</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle>
+  </Style>
+  <Style id="linhaProgresso">
+    <LineStyle><color>ff0000ff</color><width>4</width></LineStyle>
+  </Style>
+
+  <Placemark><name>POSTE 74 - PONTO RAIZ - 4506 Pero Vaz - Aviacao - 3504</name><styleUrl>#posteStyle</styleUrl><Point><coordinates>-46.432658,-24.015181,0</coordinates></Point></Placemark>
+  <Placemark><name>AVIACAO - 3466 a 5280 Castelo - 11702-700</name><description>CEP CORRETO LPL JONSON - Google Antigo: Guilhermina ERRADO</description><styleUrl>#auditoriaStyle</styleUrl><Point><coordinates>-46.435777,-24.018243,0</coordinates></Point></Placemark>
+  <Placemark><name>OCIAN - 7328 a 7732 Castelo - 11704-305</name><description>GOOGLE_ADMITIU_ERRO - Ocian nao Guilhermina</description><styleUrl>#auditoriaStyle</styleUrl><Point><coordinates>-46.463282,-24.032115,0</coordinates></Point></Placemark>
+  <Placemark><name>MARACANA - 10152 Lacador - 11705-550</name><description>Eixo Real - Maracana</description><styleUrl>#auditoriaStyle</styleUrl><Point><coordinates>-46.483163,-24.041639,0</coordinates></Point></Placemark>
+  <Placemark><name>CAICARA - 10123 Castelo - 11706-500</name><description>Caiçara - Perimetro Ocupado</description><styleUrl>#auditoriaStyle</styleUrl><Point><coordinates>-46.49524,-24.04753,0</coordinates></Point></Placemark>
+
+  <Placemark><name>LINHA PROGRESSAO VETOR A CASTELO BRANCO - ORLA VERMELHA</name><styleUrl>#linhaProgresso</styleUrl>
+    <LineString><tessellate>1</tessellate><coordinates>
+      -46.432658,-24.015181,0 -46.435777,-24.018243,0 -46.463282,-24.032115,0 -46.483163,-24.041639,0 -46.49524,-24.04753,0
+    </coordinates></LineString>
+  </Placemark>
+</Document>
+</kml>
