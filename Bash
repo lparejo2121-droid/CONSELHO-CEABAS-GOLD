@@ -1,0 +1,3 @@
+git add .github/workflows/run-test.yml
+git commit -m "perf(ci): optimize workflow with npm cache + npm ci - 15s -> 8s - C-315 380QT [LACRE 6/6] - Protocol 4431/2023"
+git push origin main
