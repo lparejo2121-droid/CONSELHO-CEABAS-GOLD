@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://opengis.net">
+  <Document>
+    <name>KML_UNIFICADO_N02_V13Q_EXT_KENNEDY</name>
+    <description>Mapeamento de Dupla Artéria (Castelo Branco + Kennedy) - CEABAS CORE 10.41 + LPL JONSON V13Q</description>
+
+    <!-- Estilos de Ícones e Linhas -->
+    <Style id="posteStyle">
+      <IconStyle>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.0</scale>
+      </LabelStyle>
+    </Style>
+
+    <Style id="arteriaCastelo">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://google.com</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+
+    <Style id="arteriaKennedy">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://google.com</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+
+    <Style id="linhaCasteloBranco">
+      <LineStyle>
+        <color>ff0000ff</color> <!-- Vermelho Metálico -->
+        <width>4</width>
+      </LineStyle>
+    </Style>
+
+    <Style id="linhaKennedy">
+      <LineStyle>
+        <color>ff00ffff</color> <!-- Ciano / Amarelo Infra -->
+        <width>4</width>
+      </LineStyle>
+    </Style>
+
+    <!-- PASTA PRINCIPAL DE MALHA URBANA -->
+    <Folder>
+      <name>Malha Urbana Corrigida e Auditada</name>
+
+      <!-- BASE RAIZ: POSTE 74 -->
+      <Placemark>
+        <name>Poste 74 - Marco Zero (Índice 3504)</name>
+        <description><![CDATA[
+          <b>Operador:</b> Laércio Góes Parejo - CREA-SP 5070081687<br/>
+          <b>Data de Amarração:</b> 09/04/2026 22:13<br/>
+          <b>Endereço:</b> Rua Pero Vaz de Caminha, 4506 - Aviação<br/>
+          <b>Nota Física:</b> Âncora de amarração linear a 400m da Castelo Branco.
+        ]]></description>
+        <styleUrl>#posteStyle</styleUrl>
+        <Point>
+          <coordinates>-46.432658,-24.015181,0</coordinates>
+        </Point>
+      </Placemark>
+
+      <!-- VETOR A: AVENIDA PRESIDENTE CASTELO BRANCO -->
+      <Folder>
+        <name>Vetor Castelo Branco (Orla)</name>
+        
+        <Placemark>
+          <name>CB - Trecho Aviação (Nº 3466 a 5280)</name>
+          <description><![CDATA[<b>CEP:</b> 11702-700/705/755<br/><b>Bairro Real:</b> Aviação<br/><b>Status:</b> Validado OGC]]></description>
+          <styleUrl>#arteriaCastelo</styleUrl>
+          <Point><coordinates>-46.435777,-24.018243,0</coordinates></Point>
+        </Placemark>
+
+        <Placemark>
+          <name>CB - Trecho Ocian (Nº 7328 a 7732)</name>
+          <description><![CDATA[<b>CEP:</b> 11704-305<br/><b>Bairro Real:</b> Ocian<br/><b>Status:</b> Validado OGC]]></description>
+          <styleUrl>#arteriaCastelo</styleUrl>
+          <Point><coordinates>-46.463282,-24.032115,0</coordinates></Point>
+        </Placemark>
+
+        <Placemark>
+          <name>CB - Trecho Maracanã (Nº 10152 - O Laçador)</name>
+          <description><![CDATA[<b>CEP:</b> 11705-550<br/><b>Bairro Real:</b> Maracanã / Eixo Real<br/><b>Status:</b> Validado OGC]]></description>
+          <styleUrl>#arteriaCastelo</styleUrl>
+          <Point><coordinates>-46.483163,-24.041639,0</coordinates></Point>
+        </Placemark>
+
+        <Placemark>
+          <name>CB - Trecho Caiçara (Nº 10123)</name>
+          <description><![CDATA[<b>CEP:</b> 11706-500<br/><b>Bairro Real:</b> Caiçara<br/><b>Status:</b> Validado OGC]]></description>
+          <styleUrl>#arteriaCastelo</styleUrl>
+          <Point><coordinates>-46.495240,-24.047530,0</coordinates></Point>
+        </Placemark>
+
+        <Placemark>
+          <name>Linha de Progressão - Castelo Branco</name>
+          <styleUrl>#linhaCasteloBranco</styleUrl>
+          <LineString>
+            <tessellate>1</tessellate>
+            <coordinates>
+              -46.435777,-24.018243,0
+              -46.463282,-24.032115,0
+              -46.483163,-24.041639,0
+              -46.495240,-24.047530,0
+            </coordinates>
+          </LineString>
+        </Placemark>
+      </Folder>
+
+      <!-- VETOR B: EXTENSÃO AVENIDA PRESIDENTE KENNEDY (ARTÉRIA PARALELA) -->
+      <Folder>
+        <name>Vetor Pres. Kennedy (Eixo Comercial Parado)</name>
+
+        <Placemark>
+          <name>PK - Eixo Aviação (Correspondente 3400+)</name>
+          <description><![CDATA[<b>Bairro Real:</b> Aviação<br/><b>Alinhamento Urbano:</b> Paralela de suporte ao Poste 74.]]></description>
+          <styleUrl>#arteriaKennedy</styleUrl>
+          <Point><coordinates>-46.438500,-24.014500,0</coordinates></Point>
+        </Placemark>
+
+        <Placemark>
+          <name>PK - Eixo Ocian (Correspondente 7000+)</name>
+          <description><![CDATA[<b>Bairro Real:</b> Ocian<br/><b>Alinhamento Urbano:</b> Quebra definitiva do marcador antigo.]]></description>
+          <styleUrl>#arteriaKennedy</styleUrl>
+          <Point><coordinates>-46.465500,-24.029000,0</coordinates></Point>
+        </Placemark>
+
+        <Placemark>
+          <name>PK - Eixo Maracanã (Correspondente 10000+)</name>
+          <description><![CDATA[<b>Bairro Real:</b> Maracanã<br/><b>Alinhamento Urbano:</b> Cruzamento de fluxo comercial do Eixo Real.]]></description>
+          <styleUrl>#arteriaKennedy</styleUrl>
+          <Point><coordinates>-46.485500,-24.038500,0</coordinates></Point>
+        </Placemark>
+
+        <Placemark>
+          <name>PK - Eixo Caiçara (Correspondente 11000+)</name>
+          <description><![CDATA[<b>Bairro Real:</b> Caiçara<br/><b>Alinhamento Urbano:</b> Fechamento de malha sul.]]></description>
+          <styleUrl>#arteriaKennedy</styleUrl>
+          <Point><coordinates>-46.497500,-24.044000,0</coordinates></Point>
+        </Placemark>
+
+        <Placemark>
+          <name>Linha de Progressão - Av. Pres. Kennedy</name>
+          <styleUrl>#linhaKennedy</styleUrl>
+          <LineString>
+            <tessellate>1</tessellate>
+            <coordinates>
+              -46.438500,-24.014500,0
+              -46.465500,-24.029000,0
+              -46.485500,-24.038500,0
+              -46.497500,-24.044000,0
+            </coordinates>
+          </LineString>
+        </Placemark>
+      </Folder>
+    </Folder>
+
+    <!-- METADADOS DE BLINDAGEM DUPLA -->
+    <Folder>
+      <name>Chancela de Segurança Estendida</name>
+      <description><![CDATA[
+        <b>Hash de Validação de Dupla Artéria:</b><br/>
+        44|45|00|14|CEABAS_CORE_10.41_EXT_KENNEDY|DIAMOND_V13Q_OK|BER=0|JITTER=0ns|S0=0_CONFIRMADO|DUPLO_VETOR_TRAVADO|PERMANENT_STANDBY_VERDE
+      ]]></description>
+    </Folder>
+  </Document>
+</kml>
