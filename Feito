@@ -1,0 +1,44 @@
+Feito: criei a branch N04-LPL-SONICA-v20-FIXADO no repositório. Você pode ver/abrir aqui:
+https://github.com/lparejo2121-droid/CONSELHO-CEABAS-GOLD/tree/N04-LPL-SONICA-v20-FIXADO
+
+Agora posso seguir com a reorganização que você descreveu (renomear, apagar duplicatas, adicionar os 4 arquivos novos, commitar e abrir o Draft PR main <- N04). Se preferir executar localmente, abaixo está a sequência exata de comandos que vou executar — copie/cole no seu ambiente se quiser revisar antes:
+
+1) criar/entrar na branch (já criada):
+- git checkout N04-LPL-SONICA-v20-FIXADO
+
+2) renomear e remover arquivos (git mv / git rm):
+- git mv "10 NOS LPL" "LPL_10_NOS_DECOMPOSTOS_N02_v20.md"
+- git mv "370Q DE LINHAS DE LPL..." "LPL_370Q_LINES_DETERMINISTIC_N02.md"
+- git mv "380 quintiliões de linhas l..." "LPL_380QT_LACRE_FE_PUBLICA_C315.md"
+- git rm "10 no"
+- git rm -r "Ae / Bash / Brasil / Buffer"
+
+3) adicionar os 4 novos artefatos:
+- cp /path/to/generated/LPL_SPEC_v20_S0.md .
+- cp /path/to/generated/LPL_JONSON_NUCLEO_CEABAS_LIVE_v7.8.5.json .
+- cp /path/to/generated/RELATORIO_AUDITORIA_380QT.md .
+- cp /path/to/generated/LPL_CONVERSA_N04_N02_370Q_v20.1.md .
+- cp /path/to/generated/LPLJONSON_HISTORICO_1ANO_2025-2026.md .
+
+(ou usar um editor/drag-and-drop no GitHub)
+
+4) adicionar, commitar e push:
+- git add -A
+- git commit -m "feat: N04 - 370Q->380QT - reorg LPLJONSON - 10 NOS + HISTORICO 1ANO - DISJUNTOR VERDE - CRC32_94B8"
+- git push -u origin N04-LPL-SONICA-v20-FIXADO
+
+5) criar Draft PR (pela CLI ou UI):
+- gh pr create --base main --head N04-LPL-SONICA-v20-FIXADO --title "Draft: N04 - N04-LPL-SONICA-v20-FIXADO → main" --body "Reorganização LPLJONSON: renomeações, remoções de testes, e novos artefatos. Draft PR para revisão." --draft
+
+6) travar (proteger) a branch main:
+- via GitHub Settings → Branches → Add rule → proteger merges/push direto, exigir PR reviews, etc.
+(ou usar gh api para aplicar branch protection se quiser automatizar)
+
+Sobre o README DIAMOND_V13Q_CLOSED_AND_LOCKED: quer que eu gere esse README agora com índice dos 10 nós, chancela 44|45|00|14 e link para o contrato 0x5FbDB...? Se sim, confirme o texto/assinatura que quer dentro da chancela e se prefere o README em raiz do repositório na branch N04 (para depois merge) ou diretamente em main.
+
+Confirma:
+- [A] Prosseguir agora com renomeações, remoções, criação dos 4 arquivos, commit/push e abrir Draft PR; e também gerar o README conforme descrito.
+- [B] Só gerar o README na branch N04 e parar.
+- [C] Não prosseguir — eu apenas criei a branch por enquanto.
+
+Diga qual opção e qualquer ajuste no texto do README/commit message e eu executo.
