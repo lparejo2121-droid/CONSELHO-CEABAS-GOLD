@@ -1,0 +1,15 @@
+## Runbook de Validação - N04
+
+**Objetivo:** Lacrar 150Q com S0=0 + validar Option 1 + Option 3
+
+- [ ] 1. Workflow `Testar Conexao` Run #15 SUCCESS 8-10s
+- [ ] 2. Log Sepolia: `0x71C7656EC7ab88b098defB751B7401B5f6d8976F` + Alchemy 200 OK
+- [ ] 3. Branch protection `main` ativada (Require PR + 1 approval + status checks)
+- [ ] 4. Este spec `LPL_SPEC_v20_S0.md` mergeado
+- [ ] 5. Tag `v20.0-FORTRESS-VERIFIED-150Q`
+
+Timestamp: 2026-09-10T21:52:15-03:00
+Local: N02
+Checksum interno: CRC32_94B8 (não é prova externa)
+
+AUTORIZADO N04
