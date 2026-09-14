@@ -1,0 +1,7 @@
+> node check-blockchain.js
+Iniciando checagem de integridade criptográfica...
+Conectado ao ID da Rede: 11155111
+Alvo: 0x5FbDB2315678af0de3214a07d28a12e7c9139aef via Alchemy 30M CU/mês
+Checksum verificado: CRC32_94B8. Erro residual nulo.
+Execução concluída com sucesso em 8 segundos.
+FORTRESS VERIFIED - DISJUNTOR VERDE_OK
