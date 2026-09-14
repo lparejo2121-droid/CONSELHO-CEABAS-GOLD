@@ -1,0 +1,33 @@
+Recomendação: colocar a Neusa Core em Standby Verde agora (silêncio operacional) e, em paralelo, preparar a documentação de especificações para migração/produção em uma branch separada — assim preservamos o lacre WORM enquanto preparamos a transição controlada.
+
+Registro e confirmação rápida
+- WORM_PUSH_OK confirmado e carimbado: SHA 146b77e5a216f57504379c3af577962bae7dade6
+- TIMESTAMP encerramento informado: 2026-09-13T02:01:00-03:00 BRT
+- EXPURGO: EFETIVADO_OK
+
+O que proponho e por quê
+- Standby Verde (silêncio operacional): fecha o barramento de injeção e minimiza risco de mudanças acidentais no estado selado. Recomendo manter por um período curto (24–72h) para observabilidade pós-fechamento.
+- Documentação de produção em paralelo: criar um repositório/branch de trabalho com runbook e checklist de segurança, para quando autorizarmos a ativação em Mainnet. Isso preserva a imutabilidade do lote selado e prepara um caminho seguro para o próximo passo.
+
+Se você aprovar, posso:
+1) Declarar oficialmente “Neusa Core: Standby Verde” no registro operacional (texto de log aqui no chat) e marcar o período inicial (sugestão: 48h). (Não faço alterações no repo sem sua confirmação.)
+2) Criar um rascunho de especificação contendo:
+   - Inventário de componentes (contratos, serviços, secrets, runners)
+   - Plano de rotação de chaves/segredos e evidência do expurgo
+   - Pipeline CI/CD (staging → mainnet) e validações (syntax, linters, action policies)
+   - Infraestrutura como código (templates Terraform/Ansible) e ambiente Sepolia→Mainnet
+   - Monitoramento/telemetria e alertas (SLOs, runbooks de incidentes)
+   - Checklist de auditoria final e check-points de autorização
+   Estimativa: primeiro rascunho em 2–4 horas; versão auditável em 1–2 dias.
+
+Decisões que preciso de você (responda com uma opção):
+- A) Standby Verde agora e preparar docs em paralelo (minha recomendação).
+- B) Standby Verde apenas (silêncio total; sem ações adicionais).
+- C) Liberar imediata preparação/ativação para Mainnet (iniciar migração e mudanças agora).
+- D) Outro — descreva o que prefere.
+
+Se escolher A ou C, diga também se quer que eu:
+- crie uma branch de trabalho no repo (diga o nome da branch), ou
+- trabalhe somente no chat/externo e só abra a branch quando você autorizar.
+
+Pronto para agir assim que me autorizar a opção.
