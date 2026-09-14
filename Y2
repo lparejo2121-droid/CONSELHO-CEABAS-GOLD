@@ -1,0 +1,13 @@
+- uses: actions/checkout@v4
+- name: Setup Node.js
+  uses: actions/setup-node@v4
+  with:
+    node-version: '20'
+    cache: 'npm'
+- name: Install dependencies
+  run: npm ci
+- name: Run blockchain check
+  env:
+    SEPOLIA_RPC_URL: ${{ secrets.SEPOLIA_RPC_URL }}
+    SEPOLIA_PRIVATE_KEY: ${{ secrets.SEPOLIA_PRIVATE_KEY }}
+  run: node check-blockchain.js
