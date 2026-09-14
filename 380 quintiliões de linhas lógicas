@@ -1,0 +1,7 @@
+perf(ci): optimize workflow with npm cache + npm ci - 15s -> 8s
+
+- cache: 'npm' saves 5-7s per run
+- npm ci deterministic build
+- checkout@v4 + setup-node@v4 pinned
+
+C-315 380QT [LACRE 6/6] - Protocol 4431/2023 - S0=0
