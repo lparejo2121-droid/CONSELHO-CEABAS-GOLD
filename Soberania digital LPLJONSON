@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://opengis.net">
+  <Document>
+    <name>KML_UNIFICADO_N02_V13Q_EXT_KENNEDY</name>
+    <description>Mapeamento de Dupla Artéria (Castelo Branco + Kennedy) - CEABAS CORE 10.41 + LPL JONSON V13Q</description>
+
+    <!-- Estilo: Poste (Círculo Nativo) -->
+    <Style id="posteStyle">
+      <IconStyle>
+        <scale>1.2</scale>
+        <Icon>
+          <href>http://google.com</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.0</scale>
+      </LabelStyle>
+    </Style>
+
+    <!-- Estilo: Artéria Castelo Branco (Quadrado Nativo) -->
+    <Style id="arteriaCastelo">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://google.com</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+
+    <!-- Estilo: Artéria Kennedy (Quadrado Nativo) -->
+    <Style id="arteriaKennedy">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://google.com</href>
+        </Icon>
+      </IconStyle>
+    </S
