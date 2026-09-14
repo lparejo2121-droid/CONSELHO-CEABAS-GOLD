@@ -1,0 +1,36 @@
+import codecs
+
+# Definição do conteúdo do KML corrigido e estruturado
+kml_content = """<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://opengis.net">
+  <Document>
+    <name>KML_UNIFICADO_N02_V13Q_EXT_KENNEDY</name>
+    <description>Mapeamento de Dupla Artéria (Castelo Branco + Kennedy) via Satélite Starlink/Embratel - CEABAS CORE 10.41 + LPL JONSON V13Q</description>
+
+    <Style id="posteStyle">
+      <IconStyle>
+        <scale>1.2</scale>
+        <Icon><href>http://google.com</href></Icon>
+      </IconStyle>
+    </Style>
+
+    <Style id="arteriaCastelo">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon><href>http://google.com</href></Icon>
+      </IconStyle>
+    </Style>
+
+    <Style id="arteriaKennedy">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon><href>http://google.com</href></Icon>
+      </IconStyle>
+    </Style>
+
+    <Style id="linhaCasteloBranco">
+      <LineStyle><color>ff0000ff</color><width>4</width></LineStyle>
+    </Style>
+
+    <Style id="linhaKennedy">
+      <LineSt
