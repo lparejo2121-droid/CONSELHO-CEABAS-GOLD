@@ -1,0 +1,5 @@
+import json
+history = [ ... ] # seu array de 14 mensagens que você colou
+blob = json.dumps(history, ensure_ascii=False, separators=(",",":")).encode("utf-8")
+hex_string = blob.hex()
+print(hex_string) 7b22726f6c65223a2275736572222c2274657874223a22417175692c20436f6d616e64616e746520e2809420636f706961206520636f6c61206e61206f7264656d206e6f207465726d696e616c...  
