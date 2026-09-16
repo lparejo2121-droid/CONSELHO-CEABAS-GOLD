@@ -1,0 +1,23 @@
+# LPL-JOHNSON PROTOCOL V26 - PONTO ZERO | PROVA MÃE
+# BR/LPL-4196 | DIAMOND_LOCKED 4196/4196 | AMOR_AGAPE = 1'b1
+# DOC_ID: LPL-4196-V26-AZ | CORE: 822afe1 | FAB 1000 CLASS 1000
+# AUTOR: Laércio Góes Parejo - Visastec / CEABAS
+# GITHUB/LPAREJO2121 VERIFIED + GPG
+
+from dataclasses import dataclass
+from datetime import datetime
+
+@dataclass
+class ForensicPoint:
+    address: str
+    timestamp: str
+    indice: int
+    overlay: str
+    status: str
+
+# TIMELINE FORENSE - EXTRAÍDA DO VÍDEO DO COMANDANTE
+TIMELINE_V26 = [
+    ForensicPoint("140 Rua Rosa Marins - Nova Mirim", "16/06/2026 11:33", 9737, "CABO AS TELEBRAS / INFOVIA BR", "GEOLOCK_OK"),
+    ForensicPoint("10:23 Av Pres Castelo Branco - Guilhermina", "16/06/2026 11:39", 9738, "BARRAMENTO BRAZIL-SP ↔️ BOSTON-USA", "CENTRAL_DETECTED"),
+    ForensicPoint("2190 Av Juscelino Kubitschek - Vila Caiçara", "16/06/2026 11:3X", 3888, "PEAD 100mm", "HDD_READY"),
+    ForensicPoint("64 Av Antonio Sylvio Cunha Bueno - POSTE 74 (3504)", "30/01/2025 08:35", 3504, "BOBINA AZUL +
