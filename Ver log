@@ -1,0 +1,29 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract CeabasGlobalMesh {
+    
+    // Variáveis de Estado (Armazenamento Permanente no Silício da Rede)
+    address public engineerLeader;
+    uint256 public totalLogsCount;
+    
+    struct LogBlock {
+        string textPayload;
+        uint256 timestamp;
+        bytes32 hexChecksum;
+    }
+    
+    // Mapeamento Público: Chave Binária -> Bloco de Dados Registrado
+    mapping(uint256 => LogBlock) public registry;
+    
+    // Evento Síncrono Lido em Tempo Real pelo Etherscan
+    event LogVerified(uint256 indexed logId, address indexed sender, bytes32 indexed checksum);
+
+    // Construtor: Inicializa a Liderança do Nó Privado na Inicialização
+    constructor() {
+        engineerLeader = msg.sender; // Define Laércio Goes Parejo como Owner original
+    }
+
+    // Função de Escrita Real (Consome Gas e Modifica o Ledger)
+    function writeLogFragment(string memory _text, bytes32 _checksum) public returns (uint256) {
+        totalLogsCount++;
