@@ -1,0 +1,44 @@
+import os
+from datetime import datetime
+
+# --- CONFIGURAÇÕES DO NOVO PROTOCOLO ---
+DIRETORIO_BASE = "Auditoria_LPL_Jonson"
+CODIGO_BLOCO = "C-160"
+FOUNDER = "LAERCIO GOES PAREJO TECNICO PRONATEC"
+HEX_ID = "0x4C41455243494F20474F455320504152454A4F7C5445434E49434F2050524F4E41544543"
+
+def inicializar_protocolo_c160():
+    print(f"🚀 [SISTEMA] Inicializando o Mapeamento de Malha do Bloco {CODIGO_BLOCO}...")
+    
+    # Cria a pasta de destino do novo bloco
+    pasta_bloco = os.path.join(DIRETORIO_BASE, CODIGO_BLOCO)
+    os.makedirs(pasta_bloco, exist_ok=True)
+    
+    nome_manifesto = f"MANIFESTO_INICIAL_{CODIGO_BLOCO}.txt"
+    caminho_completo = os.path.join(pasta_bloco, nome_manifesto)
+    
+    conteudo_inicial = f"""===================================================================
+⚙️ INICIALIZADOR DE INFRAESTRUTURA LÓGICA — PROTOCOLO {CODIGO_BLOCO}
+===================================================================
+STATUS DO MATRICIAL: EM DESENVOLVIMENTO (OPEN_PHASE)
+TIMESTAMP DE START: {datetime.now().strftime('%d/%m/%Y - %H:%M:%S')}
+FOUNDER AUTORIZADO: {FOUNDER}
+CHAVE RAIZ EVM: {HEX_ID}
+
+-------------------------------------------------------------------
+MÉTRICAS E METAS OPERACIONAIS DO BLOCO C-160:
+1. Expansão do Motor Híbrido LPL_V41_8 para arquiteturas distribuídas.
+2. Integração dos relatórios de auditoria cruzada gerados no lote b1ab6f7.
+3. Testes de persistência de dados em redes de latência determinística.
+===================================================================
+SISTEMA DE REDES AVANÇADAS — PROTOCOLO C-160 PRONTO PARA ENGENHARIA
+"""
+    
+    with open(caminho_completo, "w", encoding="utf-8") as f:
+        f.write(conteudo_inicial)
+        
+    print(f"📁 Estrutura do Bloco {CODIGO_BLOCO} criada com sucesso em: '{pasta_bloco}'")
+    print(f"💾 Arquivo de manifesto inicial gravado: '{nome_manifesto}'")
+
+if __name__ == "__main__":
+    inicializar_protocolo_c160()
