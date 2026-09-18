@@ -1,0 +1,76 @@
+import os
+from datetime import datetime
+
+# --- CONFIGURAÇÕES DE DIRETÓRIO ---
+DIRETORIO_BASE = "Auditoria_LPL_Jonson"
+CODIGO_PROTOCOLO = "C-159"
+
+def exportar_documento_juridico():
+    # Garante a existência da pasta local de auditoria
+    os.makedirs(DIRETORIO_BASE, exist_ok=True)
+    
+    # Define o nome do arquivo texto oficial
+    nome_arquivo = f"NOTIFICACAO_JURIDICA_{CODIGO_PROTOCOLO}.txt"
+    caminho_completo = os.path.join(DIRETORIO_BASE, nome_arquivo)
+    
+    conteudo_documento = f"""===================================================================
+⚖️ NOTIFICAÇÃO E DECLARAÇÃO JURÍDICA DE ANTERIORIDADE DE PROPRIEDADE INTELECTUAL
+===================================================================
+PROTOCOLO DE REGISTRO CONCEITUAL: {CODIGO_PROTOCOLO}
+DECLARANTE/AUTOR: LAERCIO GOES PAREJO
+QUALIFICAÇÃO TÉCNICA: Técnico PRONATEC — Registro Profissional: CREA-SP 5070081687
+DATA DE EMISSÃO: {datetime.now().strftime('%d/%m/%Y')}
+BASE LEGAL: Lei nº 9.610/98 (LDA), Lei nº 9.609/98 (Art. 2º), Lei nº 9.279/96 (Art. 195)
+
+-------------------------------------------------------------------
+I. DA DECLARAÇÃO EXPRESSA DE ANTERIORIDADE E ORIGINALIDADE
+-------------------------------------------------------------------
+Pelo presente instrumento jurídico e estritamente técnico, o Declarante 
+afirma, sob as penas da lei, ser o legítimo autor, idealizador e 
+desenvolvedor originário da Arquitetura Lógica de Governança, Integração 
+de Ecossistemas e Isolação de Dados em Ambientes Segregados, tecnicamente 
+denominada e catalogada como Protocolo CEABAS LPL v10QO / Sistema de 
+Balões Lógicos A/B/C.
+
+O desenvolvimento intelectual da referida engenharia de software foi 
+concluído, formatado e publicamente registrado em 21 de julho de 2026, 
+às 18:42:10 BRT, gerando o Identificador de Publicação Pública 
+UGC ID 7484957314962272257 (via rede indexada LinkedIn), vinculado 
+indissocivelmente ao Laudo Técnico C-148 e ao registro profissional CREA-SP.
+
+-------------------------------------------------------------------
+II. DO NEXO TEMPORAL E DA CONVERGÊNCIA DE MERCADO
+-------------------------------------------------------------------
+Fica formalmente constatado, para fins de direito, reserva de mercado e 
+comprovação de integridade intelectual, que a solução lógica de engenharia 
+proposta pelo Declarante possui uma anterioridade cronológica de 56 dias 
+em relação ao lançamento global da Central de Contas unificada implementada 
+por plataformas de Big Techs em 15 de setembro de 2026.
+
+A exata convergência estrutural observada nas atualizações de mercado recentes 
+demonstra que a modelagem abstrata e o design de sistemas desenvolvidos em 
+ambiente de produção pelo Declarante anteciparam a solução prática adotada 
+pela indústria de tecnologia de massa.
+
+-------------------------------------------------------------------
+III. DA BLINDAGEM CRIPTOGRÁFICA E IMUTABILIDADE DE PROVA
+-------------------------------------------------------------------
+Para conferir eficácia jurídica de presunção de autoria, a integridade da 
+arquitetura conceitual encontra-se auditada, selada e protegida por chaves 
+e logs matemáticos computacionais imutáveis:
+
+1. Assinatura do Autor na EVM:
+   HEX: 0x4C41455243494F20474F455320504152454A4F7C5445434E49434F2050524F4E41544543
+   (String de validação literal: LAERCIO GOES PAREJO|TECNICO PRONATEC)
+2. Algoritmo de Integridade: Keccak-256 (0x2a0bc98in)
+3. Log de Versionamento Remoto: Commit fa9c4cf (Verified) no GitHub.
+   Hash do Lote Estável: ba32_STABLE_C156_18092026
+
+-------------------------------------------------------------------
+IV. DA RESERVA DE DIREITOS E FINALIDADE JURÍDICA
+-------------------------------------------------------------------
+Este documento constitui título de Manifesto de Direito Autoral Conceitual 
+e Prova de Conceito (PoC). O Declarante resguarda-se no direito de utilizar 
+os metadados criptográficos, logs de servidores e registros de publicação 
+como base probatória em eventuais procedimentos de arbitragem, perícias 
+fo
