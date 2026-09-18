@@ -1,0 +1,84 @@
+import subprocess
+import os
+from datetime import datetime
+
+# --- CONFIGURAÇÕES DO ECOSSISTEMA GIT ---
+DIRETORIO_PROJETO = "Auditoria_LPL_Jonson"
+BRANCH_PRODUCAO = "main"
+BRANCH_AUDITORIA = "N04-LPL-SONICA-v20-FIXADO"
+
+def executar_comando_git(comando: list) -> str:
+    """Executa comandos do Git no terminal de forma segura e captura a resposta."""
+    try:
+        resultado = subprocess.run(
+            comando,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            check=True,
+            encoding="utf-8"
+        )
+        return resultado.stdout.strip()
+    except subprocess.CalledProcessError as e:
+        return f"⚠️ ERRO_GIT: {e.stderr.strip()}"
+    except Exception as e:
+        return f"⚠️ ERRO_SISTEMA: {str(e)}"
+
+def rodar_auditoria_cruzada():
+    print(f"📡 [AUDITORIA] Inicializando varredura de malha cruzada às {datetime.now().strftime('%H:%M:%S')}...")
+    print(f"🌿 [COMPARAÇÃO]: Camada Base [{BRANCH_PRODUCAO}] ↔️ Camada Vetorial [{BRANCH_AUDITORIA}]")
+    print("-" * 75)
+
+    # 1. Verifica os commits que existem no branch sônica mas não foram fundidos no main
+    print("🔍 [PASSO 1]: Rastreando divergências cronológicas de commits...")
+    comando_log = ["git", "log", f"{BRANCH_PRODUCAO}..{BRANCH_AUDITORIA}", "--oneline"]
+    commits_divergentes = executar_comando_git(comando_log)
+    
+    if not commits_divergentes or "ERRO" in commits_divergentes:
+        print("   🟢 Sincronização de histórico estável. Nenhum commit pendente de análise.")
+    else:
+        print("   🚨 Commits identificados exclusivamente na linhagem secundária:")
+        print(commits_divergentes)
+
+    # 2. Avalia o resumo estatístico de linhas e arquivos modificados entre os dois estados
+    print("\n🔍 [PASSO 2]: Avaliando estatísticas de volume de código (Diff Stat)...")
+    comando_stat = ["git", "diff", "--stat", BRANCH_PRODUCAO, BRANCH_AUDITORIA]
+    estatisticas_diff = executar_comando_git(comando_stat)
+    
+    if not estatisticas_diff:
+        print("   🟢 Divergência volumétrica zero. Os arquivos estão idênticos.")
+    else:
+        print("   📋 Resumo de modificações estruturais encontradas:")
+        print(estatisticas_diff)
+
+    # 3. Gera o relatório analítico final para arquivamento no lote
+    print("\n🔒 [PASSO 3]: Selando os metadados do relatório cruzado...")
+    nome_relatorio = f"AUDITORIA_CRUZADA_{BRANCH_PRODUCAO}_VS_{BRANCH_AUDITORIA}.log"
+    
+    conteudo_relatorio = f"""===================================================================
+LAUDO TÉCNICO DE AUDITORIA DE MALHA INTEGRADA — SÉCULO 22
+===================================================================
+DATA DO PROCESSAMENTO: {datetime.now().strftime('%d/%m/%Y - %H:%M:%S')}
+MATRIZ DE COMPARAÇÃO: {BRANCH_PRODUCAO} VS {BRANCH_AUDITORIA}
+
+-------------------------------------------------------------------
+[HISTÓRICO DE COMMITS EXCLUSIVOS]:
+{commits_divergentes if commits_divergentes else 'NENHUMA DIVERGÊNCIA IDENTIFICADA'}
+
+-------------------------------------------------------------------
+[ESTATÍSTICAS DE ARQUIVOS E LINHAS]:
+{estatisticas_diff if estatisticas_diff else 'ARQUIVOS CONVERGENTES E IDENTICOS'}
+===================================================================
+STATUS DO PROTOCOLO: AUDITADO_E_CONGELADO
+"""
+    
+    with open(nome_relatorio, "w", encoding="utf-8") as f:
+        f.write(conteudo_relatorio)
+    print(f"✅ Relatório de auditoria de ramificação gerado e salvo como: '{nome_relatorio}'")
+
+if __name__ == "__main__":
+    # Verifica se o script está rodando dentro de um repositório git válido
+    if os.path.exists(".git"):
+        rodar_auditoria_cruzada()
+    else:
+        print("❌ Erro: Diretório local .git não detectado. Execute o script na raiz do repositório.")
