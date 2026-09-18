@@ -1,0 +1,21 @@
+# Sistema de Auditoria LPL Jonson - Módulo de Catalogação
+
+Este repositório contém as ferramentas e automações desenvolvidas para a estruturação, catalogação cronológica e preservação de relatórios técnicos de auditoria.
+
+## 🚀 Funcionalidades
+
+- **Organização Automática:** Criação de diretórios estruturados dinamicamente por Ano/Mês no formato `AAAA/MM`.
+- **Preservação de Metadados:** Injeção automática das chaves de autenticidade e assinaturas criptográficas do Fundador no cabeçalho das atas.
+- **Conformidade de Logs:** Geração de arquivos padronizados em codificação `UTF-8` para garantir a integridade dos caracteres.
+
+## 🛠️ Como Executar
+
+Para rodar o script de geração e catalogação localmente, certifique-se de ter o Python 3 instalado e execute:
+
+```bash
+python "nome_do_seu_arquivo.py"
+```
+
+## 🔑 Parâmetros de Autenticidade Registrados
+- **Founder:** LAERCIO GOES PAREJO TECNICO PRONATEC
+- **Protocolo Base:** C-156
