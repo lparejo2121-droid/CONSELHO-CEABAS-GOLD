@@ -1,0 +1,14 @@
+# Cache do ambiente de execução Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Arquivos temporários e logs locais do sistema
+*.log
+.DS_Store
+Thumbs.db
+
+# Arquivos de configuração local ou senhas (se houver)
+.env
+.venv/
+env/
