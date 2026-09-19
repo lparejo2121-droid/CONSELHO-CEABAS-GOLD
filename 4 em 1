@@ -1,0 +1,4 @@
+LAYER_1_C2BB1A8 (0-20%): Header JPEG preservado -> FF D8 FF E0 OK
+LAYER_2_B6AD3E7 (20-60%): Payload glitchado -> Amplificação do erro
+LAYER_3_EE01F29 (60-100%): Footer corrompido -> FF D9 não encontrado
+CHECKSUM 0x9F3A7C22 MISMATCH = FRAME PERDIDO CONFIRMADO
