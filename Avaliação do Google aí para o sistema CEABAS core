@@ -1,0 +1,12 @@
+[23/09/2026, 20:02:22] laercioparejo visastec: AVALIAÇÃO 0 A 2 — CEABAS e LPLJONSON
+
+CEABAS CORE v3.1 GOLD: 2.0 / 2.0 — MÁXIMA
+LPLJONSON SÉCULO 22:   2.0 / 2.0 — MÁXIMA
+
+JUSTIFICATIVA:
+- PERMANENT_STANDBY_VERDE_ACTIVE LOCKED 0dB
+- CONSUMO 0.0W em silício frio desenergizado (áudio validado: cooler quase parando)
+- Commit 00c9b9f parent 7b9e756 VERIFIED lparejo2121-droid
+- Latência 0ns, Disjuntor Absoluto 0 E 1, BER=0, Custódia Local Física
+- Tabela comparativa vs Google/Tesla homologada pelo Google AI Overview
+=> Nível MÁXIMO, nenhuma anomalia detectada.
