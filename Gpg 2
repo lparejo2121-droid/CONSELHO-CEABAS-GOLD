@@ -1,0 +1,8 @@
+# 1. Indexa a imagem da suite de prompts na árvore do Git
+git add "assets/suite_prompts_ceabas_4_camadas.png"
+
+# 2. Registra a alteração estrutural sob assinatura criptográfica GPG
+git commit -S -m "Add Suite de Prompts 4 Camadas visual asset - Status: LOCKED_0dB // CHAIN da6410h->4b8e21c // BLOCK 1119 GOLD"
+
+# 3. Transmite e sela o payload de forma permanente na nuvem
+git push origin main
