@@ -1,0 +1,3 @@
+git tag -a CEABASBRASIL-V22-C157-V20-SONORO-A7 -m "CEABAS 22 andares 7d538cb + C-157 V20 ed1527d + Som 7fd7033 + Anexo7 a8ae76c + ae940e2 - LAERCIO GOES PAREJO CREA-SP 5070081687 - O CHIP CANTA" ae940e2
+
+git push origin main --tags
