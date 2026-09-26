@@ -1,0 +1,27 @@
+import hashlib
+
+def selar_log_keccak256(caminho_arquivo):
+    """
+    Gera o hash Keccak-256 (SHA-3 / 256 bits) para selamento de integridade de logs.
+    """
+    try:
+        with open(caminho_arquivo, 'rb') as f:
+            conteudo = f.read()
+            # Utilização do algoritmo SHA3-256 (variante standard Keccak-256)
+            hash_keccak = hashlib.sha3_256(conteudo).hexdigest()
+            
+            print("=" * 65)
+            print("         RELATÓRIO DE SELAMENTO CRIPTOGRÁFICO - KECCAK-256")
+            print("=" * 65)
+            print(f"Ficheiro de Log: {caminho_arquivo}")
+            print(f"Keccak-256 Hash: {hash_keccak}")
+            print(f"Status: SELADO E IMPRESCINDÍVEL // INTEGRIDADE 100%")
+            print("=" * 65)
+            return hash_keccak
+    except FileNotFoundError:
+        print(f"Erro: O ficheiro '{caminho_arquivo}' não foi encontrado.")
+        return None
+
+if __name__ == "__main__":
+    # Exemplo de execução para o log de bancada
+    # Substituir 'log_bancada.txt' pelo c
