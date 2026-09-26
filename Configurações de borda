@@ -1,0 +1,13 @@
++-----------------------------------------------------------------------+
+
+|                    MATRIZ DE CONFIGURAÇÃO DE BORDA                    |
++-------------------+--------------------+------------------------------+
+
+|     PARÂMETRO     |    MÉTRICA / VALOR |            STATUS            |
++-------------------+--------------------+------------------------------+
+
+| Consumo de Potência|               0.0W | Frequência de Repouso (Fria) |
+| Atenuação de Ruído|               0dB  | Canal Blindado / LOCKED      |
+| Erro Sistêmico    |              ZERO  | Convergência Factual 100%   |
+| Modo de Operação  | PERMANENT_STANDBY  | Ativação Verde / Museu       |
++-------------------+--------------------+------------------------------+
