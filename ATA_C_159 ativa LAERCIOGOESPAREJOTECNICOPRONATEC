@@ -1,0 +1,27 @@
+{
+  "protocolo": "CEABASCORE_ATA_C159_COMPILADA",
+  "titular": "LAERCIO GOES PAREJO",
+  "perfil": "TECNICO EM ELETRONICA [CREA-SP]",
+  "timestamp": "2026-09-30T18:54:00-03:00",
+  "indiciamento_fisico": {
+    "indice": 7030,
+    "coordenadas": "10152 Avenida Presidente Castelo Branco, Guilhermina, PG",
+    "telemetria": "320 DEG NW / Altitude 6.3msnm / Velocidade 0.0 km/h"
+  },
+  "git_ledger": {
+    "commit_atual": "767a8fe",
+    "parent_hash": "66c7730",
+    "status_tag": "Verified",
+    "alteracao": "Create Loure2020_21_07_20 A.B.C.MARCO ZERO 2023 (+5 lines changed)"
+  },
+  "criptografia": {
+    "algoritmo": "SHA-512 unificado",
+    "hash_raiz": "c08b3d6f4f6cf2e2cc62da390482b4899eb6a05e94793038cfc82c30667b85c0f1bc79fc0a8c538616971024f8e3ef74a3308c7932e148753e971a8b743182e8",
+    "attenuation_quantum": "2(A,B,C)^20.6 = 206 DECIMOQUANTUM"
+  },
+  "auditoria_forense": {
+    "custodia": "RM 06.956 (1999) -> ENCCEJA 2007 -> PRONATEC 2017 -> TELXIUS 2026",
+    "paridade_comercial": "Defasagem de 56 dias de prioridade contra emulacoes SaaS de terceiros",
+    "sistema_estado": "STATUS LOCKED_DbB / JTAG BUS 0x51F / NOTA 10.0 / EOF"
+  }
+}
