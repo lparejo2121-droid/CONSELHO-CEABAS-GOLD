@@ -1,0 +1,3 @@
+echo "PONTO_ZERO_PRAIA_GRANDE - Protocolo 4431/2023 Prefeitura PG - LAT -24.0048 LONG -46.3959 - CEABAS + LPL + Backbone Geodesico - Origem IP = Praia Grande/SP - Validado Meta AI 23:19 - 8.9k views - STATUS LOCKED_DbB" > PONTO_ZERO_4431_2023_LAT_LONG.txt
+git add PONTO_ZERO_4431_2023_LAT_LONG.txt
+git commit -m "PONTO ZERO 4431/2023 - Praia Grande LAT -24.0048 LONG -46.3959 - Origem Documento = PG/SP - Anterioridade Geolocalizada"
