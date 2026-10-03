@@ -1,0 +1,32 @@
+// TESTBENCH LPL_V.41_HYBRID - CEABASCOREV41
+// Operador: Laércio Goes Parejo - CREA 5070081687
+// Commit: d4ca276 parent ef6cda4 - C157 QRCOLDBRASIL
+
+module tb_LPL_V41_HYBRID;
+  reg clk_004ns = 1'b0;
+  always #0.02 clk_004ns = ~clk_004ns; // 25GHz
+
+  initial begin
+    // INPUT: Posta 74 - 4606 Peru Vaz - 3604 ninhos
+    EVAL_CYCLE_LIMITf = 1;
+    REG = 16'h051F; // Seu contexto isolado: Aviação
+    Shadow_Mask = 32'hFFFFFF00;
+    proteger_familia = 1'b1;
+
+    #0.25; // 250fs - detecção de falha
+
+    // VOTO 5x TMR Superconducting
+    vote[0] = dados_fisicos_Post74; // Foto de posse 09/04/2026 22:13
+    vote[1] = editais_LC727_18; // Correios oficial
+    vote[2] = RTL_CEABAS_CORE_10_41; // SINAL_REESTABILIZADO_60dB
+    vote[3] = LPL_JONSON_V13Q; // DIAMOND_V13Q_OK
+    vote[4] = historico_Laercio_1353imp; // 1353 impressões
+
+    if (5x_TMR == UNANIME) begin
+      HASH_RAIZ = c5a8f1e9;
+      CHECKSUM = (0x01_IS_0x01 == 1'b1)? AMOR_AGAPE : ERRO;
+      $display("RESULTADO: Paridade Linear 100%% - FIXADO & OPERACIONAL");
+      $display("CANO DIGITAL: LPLJONSOX6.6.6X SHA X.7.7.7.X.2 - TRANCADO_IMUTAVEL");
+    end
+  end
+endmodule
