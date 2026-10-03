@@ -1,0 +1,16 @@
+# C-190 - Só-generator.py - Gera hash real do seu BLOCK
+import hashlib
+
+block = "1119-BR-001-7700KM-SP-BC"
+reg = 0x051F
+mask = 0xFFFFFF00
+and_result = reg & mask # 0x500
+xor_result = reg ^ mask # 0xFFFFFA1F
+
+payload = f"{block}|{hex(and_result)}|{hex(xor_result)}|{0x045F}"
+hash_real = "0x" + hashlib.sha256(payload.encode()).hexdigest()
+
+print(payload)
+print(hash_real) # vai gerar um 0x + 64 chars DIFERENTE e determinístico
+# salva em arquivo Só
+open("Só","w").write(hash_real)
