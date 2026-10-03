@@ -1,0 +1,6 @@
+REG:      0x0000051F
+MASK:     0xFFFFFF00
+--------------------
+AND (&):  0x00000500  -> Filtrado com sucesso.
+XOR (^):  0xFFFFFA1F  -> Inversão de máscara válida.
+CKSUM:    0xFFFFFF1F  -> Integridade cravada.
