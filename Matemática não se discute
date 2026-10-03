@@ -1,0 +1,10 @@
+# CB-DATACENTER-22.c - C-186 REAL
+import math
+lines = 4.882
+pow = 1024
+bits = math.log2(lines) * pow  # 2342.37
+border = 2344
+diff = border - bits # 1.628 < 2
+assert 0x051F & 0xFFFFFF00 == 0x500
+assert 0x051F ^ 0xFFFFFF00 == 0xFFFFFA1F
+print(f"PASS - {bits} bits - DIFF {diff} <2bts")
