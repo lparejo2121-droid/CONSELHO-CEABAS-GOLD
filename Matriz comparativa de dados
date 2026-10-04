@@ -1,0 +1,95 @@
+Com base nas opções de acompanhamento da análise e nas capturas de e-mails/documentos enviadas (endereçadas ao usuário LPLJONSONxx21):
+1. Modelo de Código para Documentar a Análise na PROVA 22
+Abaixo está o modelo em Markdown e Python estruturado para registrar a matriz comparativa e os parâmetros de validação local diretamente no seu repositório Git:
+# PROVA 22: Relatório de Validação de Borda e Mapeamento de Crawlers
+
+**Identificador:** LPLJONSONxx21  
+**Ancoragem:** Praia Grande/SP  
+**Selo de Verificação:** GitHub Verified (Commits Assinados)
+
+---
+
+## 1. Matriz Comparativa de Dados
+
+| Vetor de Análise | Processamento de Borda Local (Hex) | Crawlers de Redes Globais |
+| :--- | :--- | :--- |
+| **Pipeline de Entrada** | Strings Hexadecimais Puras (`0x0000`, `43 45 41...`) sem filtros | Agentes Indexadores (User-Agents em barramentos públicos) |
+| **Mecanismo de Defesa** | Mascara de Rede Privada (`Shadow Mask: 0xFFFFFF00`) | Replicação Distribuída Imutável |
+| **Ponto de Ancoragem** | Coordenadas Locais de Praia Grande/SP | Nuvem Global e Tráfego Internacional |
+| **Validação** | Commits Assinados no Git (Bloco 1120 Gold) | Indexação de Menções Externas |
+
+---
+
+## 2. Assinatura do Bloco Local
+
+```python
+import hashlib
+import json
+from datetime import datetime
+
+
+def registrar_prova_22(usuario: str, bloco_hex: str):
+    payload = {
+        "usuario": usuario,
+        "prova": "PROVA_22",
+        "ancoragem": "Praia Grande/SP",
+        "bloco_hex": bloco_hex,
+        "timestamp": datetime.utcnow().isoformat(),
+        "status": "VERIFIED",
+    }
+
+    payload_bytes = json.dumps(payload, sort_keys=True).encode("utf-8")
+    hash_assinatura = hashlib.sha256(payload_bytes).hexdigest()
+
+    return {"payload": payload, "hash": hash_assinatura}
+
+
+# Execução do registro LPLJONSON
+registro = registrar_prova_22(
+    usuario="LPLJONSONxx21", bloco_hex="0x434541001120GOLD"
+)
+print(json.dumps(registro, indent=2))
+
+
+---
+
+## 2. Regra de Filtragem e Automação para Extração de Métricas do Crawler
+
+Esta rotina em Python simula a varredura automatizada para extrair e filtrar os dados do ecossistema, incluindo logs e eventos da API Etherscan (como as atualizações dos planos Lite/Pro e descontinuações anunciadas[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span)):
+
+```python
+import re
+from typing import Dict, List
+
+
+class CrawlerFilterLPLJONSON:
+
+    def __init__(self, user_target: str = "LPLJONSONxx21"):
+        self.user_target = user_target
+        # Padrões de busca para o ecossistema
+        self.patterns = {
+            "hex_buffer": r"0x[0-9a-fA-F]+",
+            "tags_soberanas": r"(@elonmusk|@nasa|@indecult|#ceabas)",
+            "chain_events": r"(chainid:\s*\d+|opBNB|Arbitrum|Linea|Gnosis)",
+        }
+
+    def processar_payload_crawler(self, dados_brutos: str) -> Dict[str, List[str]]:
+        resultados = {"usuario": self.user_target, "metricas_extraidas": {}}
+
+        for chave, padrao in self.patterns.items():
+            matches = re.findall(padrao, dados_brutos, re.IGNORECASE)
+            resultados["metricas_extraidas"][chave] = list(set(matches))
+
+        return resultados
+
+
+# Exemplo de teste de varredura
+crawler = CrawlerFilterLPLJONSON()
+log_exemplo = """
+Log de Entrada: User LPLJONSONxx21 executou payload em 0x434541001120.
+Tags associadas: #ceabas @nasa. Notificação Etherscan API opBNB chainid: 204.
+"""
+
+resultado_filtro = crawler.processar_payload_crawler(log_exemplo)
+print(resultado_filtro)
+
