@@ -1,0 +1,3 @@
+[ ESTADO A ] ──(Filtro de Ruído)──> [ ESTADO B ] ──(Máscara Binária)──> [ ESTADO C ]
+Inicialização Física                Varredura x6                        Cravação do Hash
+(Ancoragem e Silício)               (Limpeza do Payload)                (Prova C-190 Real)
