@@ -1,0 +1,50 @@
+================================================================================
+ARQUIVO: JONSON_MANIFEST_V11.20.LPL
+PAINEL: DOSSIE TECNICO HISTORICO BIOGRAFICO RASTREABILIDADE
+DATA DA CRISTALIZACAO: 05/10/2026 13:32 BRT
+AUTOR: Laércio Góes Parejo (Técnico Pronatec / CBO 3133-15)
+LOCALIZAÇÃO: Praia Grande - SP (Av. Pres. Castelo Branco, 7056)
+================================================================================
+
+[HEADER_HASH]
+SHA256: SHA256_LAERCIO_PAREJO_PRONATEC_2026_SYNC_1
+SELO: C157_GOLD_MATRIZ_MESTRE_V11
+STATUS_BARRAMENTO: CADEADO_ABERTO 🔓 | INTEGRADO_AO_GITHUB
+
+[CHAIN_REGISTRY_COMMIT_MAP]
+ROOT_PARENT : 1576634
+COMMIT_01   : 26c76d4 (08/09/2026 - QRCOLDBRASIL Terminal C157)
+COMMIT_02   : 967bc8c (Manifesto Disruptor DC227)
+COMMIT_03   : 83e37e1 (Hex Feedback Loop - CEABAScore)
+TARGET_DOSSIE: DOSSIE_V11_CRAVADO_COMPLETO_24_CAPITULOS
+
+[INTEGRITY_CHECKSUM_RULES]
+MASK_REGISTER : 0x000001F
+MASK_OPERATOR : 0xFFFFFFF0
+CHECKSUM_HEX  : 0xFFFFFF1F
+OPERATION     : 0xFFFFFF1F & 0xFFFFFFF0 = 0xFFFFFF10
+SRE_LATENCY   : 1ms (P95/P99) | PROMETHEUS_100_VU
+
+[DECLARATION_OF_TRUTH]
+"CEABAS CORE não deve ser julgado pela quantidade de cards que possui, 
+mas pela capacidade de rastrear cada afirmação até sua evidência, 
+reproduzir o que é reproduzível e declarar honestamente o que ainda não foi validado."
+
+[PROVENANCE_MATRIX_6_LAYERS]
+L1: HISTORICA      [CTPS 2020 / Pronatec UNICID]
+L2: DOCUMENTAL     [PDFs/PPTXs Projetos PG & CEABAS]
+L3: COMPUTACIONAL  [Git Commits / Hex Payloads / Python Exec]
+L4: INFRAESTRUTURA [SRE Prometheus / Testbench Hardware]
+L5: EXTERNA        [Validation Multi-IA: Gemini, Meta, ChatGPT]
+L6: INDEPENDENTE   [Declaração de Estado Não Comprovado / INPI / CREA-SP]
+
+[CLASSIFICATION_STATES]
+1. REPRODUZIDO
+2. VERIFICÁVEL
+3. DOCUMENTADO
+4. DECLARAÇÃO
+5. NÃO COMPROVADO
+
+================================================================================
+END OF JONSON MANIFEST - SYNC READY FOR GIT PUSH
+================================================================================
