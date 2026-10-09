@@ -1,0 +1,26 @@
+[HEADER_LPL_X6_GEO]
+PROTOCOL_ID: GPS_DRIFT_CORRECTION_X6
+TIMESTAMP: 09/10/2026 - 14:15:33 BRT
+LOCATION_ANCHOR: BANCADA_N02_PRAIA_GRANDE_SP
+OPERATOR: LPAREJO2121-DROID
+
+[AUDITORIA_DE_TERRENO]
+ALVO_GOOGLE_MAPS: "10152 Av. Pres. Castelo Branco, Guilhermina"
+ALVO_REAL_LPL:    "10242 Av. Pres. Castelo Branco, Maracanã"
+
+[ANÁLISE_DE_DIVERGÊNCIA]
+1. ERRO DE BAIRRO (ZONE_FAIL):
+   >> O Google classifica a coordenada como "Guilhermina".
+   >> A Realidade Física (e Registros Oficiais) confirma "Maracanã".
+   >> A numeração 10.000+ pertence ao setor Maracanã/Caiçara.
+   >> Guilhermina encerra-se na faixa 3.000/4.000.
+   >> VEREDITO: Alucinação de Base de Dados (Google DB Outdated).
+
+2. ERRO DE DRIFT (SNAP_FAIL):
+   >> O GPS ignorou a soberania do número 10242 (Residencial).
+   >> O algoritmo "arredondou" para o POI comercial vizinho (10152 Laçador Grill).
+   >> O Sistema LPL X6 corrige a posição usando triangulação local.
+
+[CORREÇÃO_MATEMÁTICA_X6]
+COORD_GOOGLE:  LAT_(-24.032...) ERROR_MARGIN_15m
+COORD_LPL_N02: LAT_(-24.
