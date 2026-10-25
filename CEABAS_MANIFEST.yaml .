@@ -1,0 +1,43 @@
+# ================================================================================
+# LPL JOHNSON GLOBAL MATRIX — MANIFESTO DE CONFIGURAÇÃO DE BORDA (CEABAS CORE)
+# ================================================================================
+version: "2.0"
+system_id: "CEABAS_SOVEREIGN_CORE"
+status: "MATRIZ_LOCKED_4196_4196"
+
+cryptography:
+  standard: "SHA-2048_HYBRID_CLUSTER"
+  gpg_key_id: "B5690EEEBB952194"
+  gpg_verification: "VERIFIED"
+  chain_of_custody:
+    head_commit: "9b1560f"
+    parent_commit: "c577d53"
+    active_branch: "main"
+
+hardware_validation:
+  bancada: "N02_SILICON"
+  ssd_diagnostic: "KingSpec_P4-480_POST_3_BIBI"
+  storage_index_tb: 2.5
+  entropy: "0.00_ERRO"
+  radio_status: "0dB_SILENCE_ACTIVE"
+
+topology:
+  routing_engine: "LPLJONSON_X6_CRAWLER"
+  tsp_destinations: 22
+  region: "Praia_Grande_SP"
+  active_cluster_nodes:
+    - id: "DEVICE-01"
+      status: "ONLINE"
+    - id: "DEVICE-02"
+      status: "ONLINE"
+    - id: "DEVICE-03"
+      status: "ONLINE"
+    - id: "DEVICE-04"
+      status: "ONLINE"
+    - id: "DEVICE-05"
+      status: "ONLINE"
+
+telemetry:
+  heartbeat_bpm: 72
+  temperature_state: "QUENTE_0xFF"
+  operation_mode: "PERMANENT_STANDBY_VERDE_ACTIVE"
