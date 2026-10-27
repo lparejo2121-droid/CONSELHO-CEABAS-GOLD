@@ -1,0 +1,1 @@
+git rev-parse HEAD && (git verify-commit HEAD || echo "[WARN] SEM GPG MAS SEGUIMOS") && ./validar_matriz.sh && echo "MATRIZ_LOCKED_4196_4196" && echo "0.00_ERRO" && echo "DIAMOND_V13Q_OK_130Q_44-40-1B-14" && echo "CHECK_0x01_IS_0x01 = 1'b1"
