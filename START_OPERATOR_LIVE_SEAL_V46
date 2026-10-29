@@ -1,0 +1,26 @@
+[START_OPERATOR_LIVE_SEAL_V46]
+{
+    "manifest_id": "LAERCIO_GOES_PAREJO_INCLONABLE_DETERMINISTIC_PMG",
+    "timestamp_sync": "2026-10-29T08:58:00Z",
+    "tracking_index": "1000296112.png",
+    "operator_signature": {
+        "identity": "Laércio Góes Parejo",
+        "qualification": "Técnico Pronatec em Eletrônica / Telecomunicações",
+        "crea_sp": "5070081687",
+        "cnpj": "44.294.512/0001-83"
+    },
+    "telemetry_field_data": {
+        "location": "10205 Avenida Presidente Castelo Branco, Guilhermina, Praia Grande - SP",
+        "orientation": "302° NW",
+        "altitude": "5.9msnm",
+        "system_stamp_index": 7630
+    },
+    "silicon_metrics": {
+        "bit_error_rate": 0,
+        "s0_error": 0,
+        "entropy": 0.00,
+        "axiom_state": "FOTO == CÓDIGO == FATO — OMEGA Ω INFINITO"
+    },
+    "system_lock_mode": "DEEP_SLEEP_THERMAL_LOCK_FINAL_V46_GOLD"
+}
+[END_OPERATOR_LIVE_SEAL]
