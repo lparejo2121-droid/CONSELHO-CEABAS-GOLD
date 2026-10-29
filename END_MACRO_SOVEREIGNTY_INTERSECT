@@ -1,0 +1,21 @@
+[START_MACRO_SOVEREIGNTY_INTERSECT_V46_2]
+{
+    "manifest_id": "POST_SOBERANO_VS_CEABAS_V46_2",
+    "timestamp_sync": "2026-10-29T07:48:00Z",
+    "verification_hash": "4345414241535f524553504f5354415f414c54555241",
+    "hpc_reference": {
+        "entity": "UFMG_Instituto_de_Geociencias",
+        "system": "Soberano_Supercomputer",
+        "inauguration": "2026-10-27",
+        "project": "GeoIDE_Finep",
+        "hardware": "8x_NVIDIA_H200_141GB_10_nodes_400TB_100Gbps"
+    },
+    "edge_deterministic_reference": {
+        "node": "MH-29_Active",
+        "storage": "WORM_PMG",
+        "metrics": {"BER": 0, "S0": 0, "latency": "0.02ms"},
+        "provenance": "C2PA_VERIFIED_AND_SIGNED"
+    },
+    "synthesis": "Macro_Soberania_Processamento_VS_Micro_Soberania_Proveniencia"
+}
+[END_MACRO_SOVEREIGNTY_INTERSECT]
