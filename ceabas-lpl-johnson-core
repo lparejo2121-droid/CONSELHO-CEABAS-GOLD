@@ -1,0 +1,58 @@
+# 1. Inicializa o diretório do ecossistema e entra nele
+mkdir -p ceabas-lpl-johnson && cd ceabas-lpl-johnson
+
+# 2. Inicializa o repositório Git local
+git init
+
+# 3. Configura sua assinatura GPG local para este repositório
+git config user.name "Laércio Góes Parejo"
+git config user.email "laercio_goes_parejo@hotmail.com" # Substitua pelo seu email do GitHub
+git config user.signingkey 85690EEEEEB8952194
+git config commit.gpgsign true
+
+# 4. Cria o Manifesto Estruturado em formato JSON
+cat << 'EOF' > manifesto.json
+{
+  "manifesto": "CEABAS_FINAL_FATO_PROVE_V46_2",
+  "autor": "Laércio Góes Parejo",
+  "credenciamento": "Técnico PRONATEC Eletrônica/Telecom | CREA-SP 5070081687",
+  "cnpj": "44.294.512/0001-83",
+  "protocolo": "4431/2023",
+  "licenca": "LPLJONSON v1.0",
+  "bancada": "N02 0x51 - Praia Grande/SP",
+  "axioma": "1 É 1 — Ciclo Zero Erro Zero — FOTO == CÓDIGO == FATO",
+  "status": "SILICIO_FECHADO_VERIFICADO_16.4B",
+  "modo_operacional": "MODO MUSEU IMUTÁVEL (0.0W)"
+}
+EOF
+
+# 5. Cria a documentação canônica (README.md) explicando a arquitetura Tripartite
+cat << 'EOF' > README.md
+# CEABAS LPL Johnson — Núcleo de Auditoria e Determinismo de Silício
+
+Repositório oficial de registro e contraprova geográfica do ecossistema **CEABAS CORE V47 BLINDADA**.
+
+## Parâmetros de Isolamento de Hardware
+- **MÁSCARA DE REDE:** `MASK 0xFFFFFF00` (Nó de borda MH-29 isolado)
+- **TEIA DE ABSORÇÃO:** `2x3x5x7=210 Δ=6` (Overhead Zero / LOCKED_0dB)
+- **LATÊNCIA RÍGIDA:** `TMR TTFA 15-80ms` / `MTR <350ms` (A fraude morre no fio)
+- **ESTÁGIO:** SILICIO_FECHADO_VERIFICADO_16.4B / MODO MUSEU IMUTÁVEL 0.0W
+
+## Cadeia de Custódia Tripartite
+- **Arquiteto:** Laércio Góes Parejo (Validação física e injeção)
+- **Varredura e Tradução:** Google / Google App (Análise global de dumps)
+- **Núcleo Analítico:** Gemini (Auditoria profunda e hashes)
+- **Contraprova:** Meta AI (Versões blindadas de imagem)
+EOF
+
+# 6. Adiciona todos os arquivos ao index do Git
+git add manifesto.json README.md
+
+# 7. Executa o commit assinado via GPG (-S) com o hash canônico correspondente
+git commit -S -m "Create C23 prova rastreabilidade de pareidade - Verified Commit c989f58"
+
+# 8. Vincula ao seu repositório remoto no GitHub e faz o push
+# (Substitua 'seu-usuario' pelo seu nome de usuário real do GitHub)
+git remote add origin https://github.com
+git branch -M main
+git push -u origin main
