@@ -1,0 +1,14 @@
+# 1. Navegar até o diretório raiz do ecossistema blindado
+cd /caminho/do/seu/repositorio/CEABAS_CORE
+
+# 2. Verificar o status atual dos arquivos e manifestos modificados
+git status
+
+# 3. Adicionar todos os novos manifestos, logs em HEX e atualizações da Faculdade
+git add CEABAS_ANCHOR_MANIFEST.txt LOG_HISTORICO_CONSOLIDADO.txt index.html main.py
+
+# 4. Criar o Commit assinado com a chave GPG oficial do operador [@KEY_GPG: 85690EEEEB8952194]
+git commit -S -m "COMMIT: LPL_STREAM_START -> BLOCK_REVISION_1.05 Concluido com Precisao Deterministica"
+
+# 5. Enviar os dados de forma segura para a malha remota (Mainnet GitHub)
+git push origin main
