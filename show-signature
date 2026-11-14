@@ -1,0 +1,46 @@
+name: Validacao Automatizada e Verificacao GPG
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  auditoria-e-testes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar codigo do repositorio
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Configurar ambiente Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Verificar assinatura GPG do commit
+        run: |
+          echo "Verificando status da assinatura do commit mais recente..."
+          git log -1 --show-signature
+
+      - name: Executar script de validacao
+        run: |
+          if [ -f "harness.py" ]; then
+            python harness.py
+          else
+            echo "Arquivo harness.py nao encontrado na raiz."
+            exit 1
+          fi
+
+      - name: Salvar artefato de log gerado
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: log-execucao
+          path: PROVA19.txt
+          if-no-files-found: warn
