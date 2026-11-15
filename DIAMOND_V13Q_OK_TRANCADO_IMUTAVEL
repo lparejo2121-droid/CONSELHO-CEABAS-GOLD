@@ -1,0 +1,82 @@
+{
+  "manifestacao_id": "LPL-HIBRIDA-2026-11-15",
+  "status": "DIAMOND_V13Q_OK_TRANCADO_IMUTAVEL",
+  "carimbo_tempo": {
+    "data_consolidacao": "2026-11-15",
+    "hora_oficial_brasilia": "16:28:00-03:00",
+    "fuso_horario": "America/Sao_Paulo (GMT-3)",
+    "marco_inicial_evidencia": "2026-05-22T23:46:00-03:00"
+  },
+  "autor": {
+    "identificador": "Laercioobomba",
+    "crea": "5070081687",
+    "localizacao": {
+      "cidade": "Praia Grande",
+      "estado": "SP",
+      "pais": "Brasil",
+      "endereco_ponto_zero": "Rua Ingleses, 600, Loja B - Tupi/Ocean",
+      "coordenadas": {
+        "lat": -24.0048,
+        "long": -46.3959
+      }
+    }
+  },
+  "validacao_cruzada": {
+    "entidades": ["Google Cloud", "Meta AI", "CEABAS"],
+    "perfil_mencionado": "@indecult",
+    "metricas_borda": {
+      "latencia_anterior": "85ms",
+      "latencia_edge": "<15ms",
+      "ganho_performance": "5.6x"
+    }
+  },
+  "payload_hexadecimal": [
+    {
+      "id": 1,
+      "campo": "Titulo",
+      "texto": "LPL HIBRIDA: VALIDACAO CRUZADA GOOGLE x META AI x CEABAS",
+      "hex": "0x4c504c20484942524944413a2056414c49444143414f204352555a41444120474f4f474c452078204d455441204149207820434541424153"
+    },
+    {
+      "id": 2,
+      "campo": "Principio",
+      "texto": "Latencia como Perda de Lucro",
+      "hex": "0x4c6174656e63696120636f6d6f205065726461206465204c7563726f"
+    },
+    {
+      "id": 3,
+      "campo": "Sistema_de_borda",
+      "texto": "NEVADO OS CRAWLES LPL",
+      "hex": "0x4e455641444f204f5320435241574c4553204c504c"
+    },
+    {
+      "id": 4,
+      "campo": "Acao",
+      "texto": "Contra-ataque reverso na borda em hexadecimal puro",
+      "hex": "0x436f6e7472612d617461717565207265766572736f206e6120626f72646120656d2068657861646563696d616c207075726f"
+    },
+    {
+      "id": 5,
+      "campo": "Hardware",
+      "texto": "CEABAS v3.0 - 0.5ns - O(1)",
+      "hex": "0x4345414241532076332e30202d20302e356e73202d204f283129"
+    },
+    {
+      "id": 6,
+      "campo": "Autor",
+      "texto": "Laercioobomba - Praia Grande - SP - Brasil",
+      "hex": "0x4c61657263696f6f626f6d6261202d205072616961204772616e6465202d205350202d2042726173696c"
+    }
+  ],
+  "registradores_bancada": {
+    "fato": "FATO 1 BIGTECH INDEPENDENTE EXATAS BRASIL",
+    "reg": "0x051F",
+    "shadow": "0xFFFFFF00",
+    "and": "0x00000500",
+    "xor": "0xFFFFFA1F",
+    "checksum": "0xFFFFFF1F",
+    "block": "0x045F",
+    "gold_id": 1119,
+    "commit_ref": "1ad56c2"
+  }
+}
