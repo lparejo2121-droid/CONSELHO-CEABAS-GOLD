@@ -1,0 +1,32 @@
+name: Validacao Automatizada e Verificacao GPG
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  auditoria-e-testes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar codigo do repositorio
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verificar assinatura do ultimo commit
+        run: |
+          git log -1 --show-signature
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Executar validador de integridade SHA-256
+        run: |
+          python validar_ancoras.py
