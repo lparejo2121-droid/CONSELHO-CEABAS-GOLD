@@ -1,0 +1,19 @@
+{
+  "projeto": "Unificacao_Registros_2026",
+  "entradas": [
+    {
+      "id_sequencial": "REG-001",
+      "data_hora": "2026-11-18T11:58:00-03:00",
+      "origem": "Gemini",
+      "arquivo_original": "GEM_PHOTO_097B1D0B-F732-4D2B-81D1-82F5F8D4AF0E.jpg",
+      "resumo": "Print da tela de validação"
+    },
+    {
+      "id_sequencial": "REG-002",
+      "data_hora": "2026-11-18T12:05:00-03:00",
+      "origem": "WhatsApp_MetaAI",
+      "arquivo_original": "IMG-20261118-WA0004.png",
+      "resumo": "Resposta sobre LPL Hibrida"
+    }
+  ]
+}
