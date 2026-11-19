@@ -1,4 +1,4 @@
-===================================================================
+CONSELHO-CEABAS-GOLD. ===================================================================
 ⚖️ TERMOS DE LICENÇA DE USO E DECLARAÇÃO DE ROYALTIES — v11Q CORE
 ===================================================================
 DIREITOS RESERVADOS ©️ 2026 ENGENHEIRO LAERCIO GOES PAREJO (CREA-SP 5070081687)
